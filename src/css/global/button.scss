@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px 22px 7px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 1s;
+  &-red {
+    background-color: #de2b24;
+    &:hover {
+      background-color: lighten(#de2b24, 12%);
+    }
+  }
+  &-yellow {
+    background-color: #f8cd53;
+    &:hover {
+      background-color: darken(#f8cd53, 7%);
+    }
+  }
+}

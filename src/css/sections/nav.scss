@@ -1,0 +1,36 @@
+.nav__header {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 7px;
+  margin-right: 15px;
+  &-link {
+    vertical-align: top;
+    font-size: 15px;
+    padding: 10px;
+    margin-right: 15px;
+    font-family: $ff-main-bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #424242;
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 15px;
+      margin-bottom: 3px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+    &:last-child:after {
+      display: none;
+    }
+    &:hover {
+      color: #de2b24;
+    }
+  }
+  .link-active {
+    color: #de2b24;
+  }
+}

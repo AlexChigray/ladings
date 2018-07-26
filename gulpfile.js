@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-// const pug = require('gulp-pug');
+const pug = require('gulp-pug');
 const spritesmith = require('gulp.spritesmith');
 const del = require('del');
 const rename = require("gulp-rename");
@@ -30,7 +30,8 @@ gulp.task('styles:compile', function () {
 });
 /*gulp-pug*/
 gulp.task('templates:compile', function buildHTML() {
-  return gulp.src('src/tempales/index.pug')
+
+  return gulp.src('src/tempales/sections/index.pug')
       .pipe(pug({
         pretty: true
       }))
@@ -64,6 +65,6 @@ gulp.task('watch', function () {
 });
 /*default*/
 gulp.task('default', gulp.series(
-    gulp.parallel(/*'templates:compile',*/ 'styles:compile', 'sprite', 'copy'),
+    gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
     gulp.parallel('watch', 'server')
 ));

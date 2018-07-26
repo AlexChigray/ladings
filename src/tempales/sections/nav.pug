@@ -1,0 +1,7 @@
+nav.nav__header
+  -var links = ['Home', 'About Us', 'Our Approch', 'Our Work']
+  each link in links
+    if link === 'Home'
+      a.nav__header-link.link-active(href="#")=link
+    else
+      a.nav__header-link(href="#")=link
