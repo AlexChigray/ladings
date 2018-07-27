@@ -6,6 +6,7 @@ const spritesmith = require('gulp.spritesmith');
 const del = require('del');
 const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 
 // Static server
 gulp.task('server', function () {
@@ -25,6 +26,7 @@ gulp.task('styles:compile', function () {
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
       .pipe(rename("main.min.css"))
+      .pipe(plumber())
       .pipe(gulp.dest("build/css"))
       .pipe(browserSync.stream());
 });
@@ -35,6 +37,7 @@ gulp.task('templates:compile', function buildHTML() {
       .pipe(pug({
         pretty: true
       }))
+      .pipe(plumber())
       .pipe(gulp.dest('build'));
 });
 /*spritesmith*/
@@ -51,10 +54,12 @@ gulp.task('sprite', function (cb) {
 /*copy*/
 gulp.task('copy:fonts', function () {
   return gulp.src('src/fonts/**/*.*')
+      .pipe(plumber())
       .pipe(gulp.dest('build/fonts'));
 });
 gulp.task('copy:images', function () {
   return gulp.src('src/images/**/*.*')
+      .pipe(plumber())
       .pipe(gulp.dest('build/images'));
 });
 gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));

@@ -1,0 +1,16 @@
+.banner {
+  padding: 174px 0 220px;
+  text-align: center;
+  color: #fff;
+  background: #ccc url("../images/main.jpg") no-repeat center/cover;
+  &__about {
+    font-size: 48px;
+  }
+  &__about--title {
+    font-family: $ff-main-light;
+    font-size: 30px;
+    margin: 0;
+    margin-top: 6px;
+    margin-bottom: 26px;
+  }
+}

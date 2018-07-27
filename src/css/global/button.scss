@@ -19,4 +19,12 @@
       background-color: darken(#f8cd53, 7%);
     }
   }
+  &-text--uppercase{
+    text-transform: uppercase;
+    font-family: $ff-main-bold;
+    padding: 20px 40px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    font-size: 21px;
+  }
 }
