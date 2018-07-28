@@ -1,0 +1,23 @@
+.about {
+  padding: 101px 0 120px 0;
+  text-align: center;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 240px;
+  }
+  &__header {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  &__description {
+    margin: 0;
+    font-size: 14px;
+    font-family: $ff-about;
+    color: #5c5c5c;
+    letter-spacing: 1px;
+  }
+}

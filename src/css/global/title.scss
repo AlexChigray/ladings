@@ -1,0 +1,31 @@
+.title {
+  font-size: 36px;
+  font-family: $ff-main-bold;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 45px;
+  &__header {
+    margin: 0;
+    margin-bottom: 7px;
+    line-height: 1;
+  }
+  &__text {
+    margin: 0;
+    font-size: 20px;
+    font-family: $ff-main;
+  }
+}
+.line__bottom {
+  position: relative;
+  margin-top: 18px;
+  margin-bottom: 61px;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+  }
+}

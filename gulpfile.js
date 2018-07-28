@@ -42,8 +42,9 @@ gulp.task('templates:compile', function buildHTML() {
 });
 /*spritesmith*/
 gulp.task('sprite', function (cb) {
-  const spriteData = gulp.src('images/*.png').pipe(spritesmith({
+  const spriteData = gulp.src('src/image/icons/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
+    imgPath: '../images/sprite.png',
     cssName: 'sprite.scss'
   }));
   spriteData.img.pipe(gulp.dest('build/images/'));
@@ -58,7 +59,7 @@ gulp.task('copy:fonts', function () {
       .pipe(gulp.dest('build/fonts'));
 });
 gulp.task('copy:images', function () {
-  return gulp.src('src/images/**/*.*')
+  return gulp.src('src/image/**/*.*')
       .pipe(plumber())
       .pipe(gulp.dest('build/images'));
 });
