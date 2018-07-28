@@ -11,8 +11,10 @@
   }
   &__text {
     margin: 0;
+    text-align: center;
     font-size: 20px;
     font-family: $ff-main;
+    font-weight: normal;
   }
 }
 .line__bottom {
@@ -28,4 +30,7 @@
     height: 5px;
     background-color: #000;
   }
+}
+.white {
+  color: #fff;
 }
