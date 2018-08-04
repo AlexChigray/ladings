@@ -3,6 +3,9 @@
   text-align: center;
   color: #fff;
   background: #ccc url("../images/main.jpg") no-repeat center/cover;
+  @media (max-width: 576px) {
+    background-position-x: 80%;
+  }
   &__about {
     font-size: 48px;
   }

@@ -1,12 +1,26 @@
 .about {
   padding: 101px 0 120px 0;
   text-align: center;
+  @media (max-width: 780px) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: 780px) {
+      flex-direction: column;
+    }
   }
   &__item {
     width: 240px;
+    @media (max-width: 780px) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
   &__header {
     font-size: 22px;

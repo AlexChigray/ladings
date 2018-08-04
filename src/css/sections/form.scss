@@ -1,6 +1,12 @@
 .form {
   padding: 99px 0 111px;
   background-color: #1287bf;
+  @media (max-width: 780px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   &-icon {
     position: relative;
     margin-top: 15px;
@@ -32,6 +38,7 @@
   }
   &__content {
     position: relative;
+    display: none;
     max-width: 683px;
     margin: 50px auto;
     padding: 45px 60px;
@@ -47,6 +54,11 @@
       top: 0;
       margin-top: -20px;
       transform: translateX(-50%) rotate(45deg);
+    }
+    @media (max-width: 780px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      width: 90%;
     }
     &--title {
       text-align: center;
@@ -72,9 +84,38 @@
       margin: 0 auto;
       margin-top: 24px;
       padding: 12px 20px;
+      border: none;
+      border: 1px solid #fff;
       width: 30%;
       font-size: 16px;
       cursor: pointer;
+      @media (max-width: 780px) {
+        font-size: 14px;
+        width: 50%;
+      }
+      @media (max-width: 576px) {
+        width: 50%;
+        font-size: 12px;
+      }
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    margin-top: -22.5px;
+    margin-right: -22.5px;
+    background-color: #de2b24;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    .close {
+      font-size: 28px;
+      text-align: center;
+      line-height: 38px;
+      color: #fff;
     }
   }
 }
